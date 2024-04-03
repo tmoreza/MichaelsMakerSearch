@@ -12,8 +12,12 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		glue = "steps",
 		tags = "@Regression",
 		monochrome = true,
-		plugin = {"pretty",
-				 "summary"}, 
+		plugin = {
+				"html:target/cucumber-html-report", 
+				"json:target/cucumber.json",
+				"pretty:target/cucumber-pretty.txt",
+				"usage:target/cucumber-usage.json", 
+				"junit:target/cucumber-results.xml"}, 
 		snippets = SnippetType.CAMELCASE)
 public class SearchRunner {
 }

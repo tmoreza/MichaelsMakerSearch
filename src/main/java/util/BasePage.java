@@ -8,7 +8,6 @@ import java.util.Date;
 import java.util.Random;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.AfterClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
