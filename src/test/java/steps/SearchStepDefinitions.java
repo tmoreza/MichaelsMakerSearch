@@ -36,8 +36,10 @@ public class SearchStepDefinitions extends BasePage{
 	@Then("User should land on Products Search Page and find {string}")
 	public void userShouldLandOnProductsSearchPageAndFindProducts(String searchTerm) {
 		productsSearchPage = PageFactory.initElements(driver, ProductsSearchPage.class);
-		productsSearchPage.validateSearchResults(searchTerm);
-	
+		boolean validationResult = productsSearchPage.validateSearchResults(searchTerm);
+		Assert.assertTrue("No matching Products were displayed!", validationResult);
+
+		
 		tearDown();
 	}
 	
