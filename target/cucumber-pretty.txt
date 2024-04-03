@@ -1,0 +1,21 @@
+
+@Search @Regression
+Scenario Outline: MultiBrowser Search validation                         # src/test/resources/features/MakerSearch.feature:40
+  Given User is on the "chrome" MakerPlace Home Page                     # steps.SearchStepDefinitions.userIsOnTheMakerPlaceHomePage(java.lang.String)
+  When User enters the "stained glass" in the searchBar field            # steps.SearchStepDefinitions.userEntersTheStringInTheSearchBarField(java.lang.String)
+  And User clicks on search button                                       # steps.SearchStepDefinitions.userClicksOnSearchButton()
+  Then User should land on Products Search Page and find "stained glass" # steps.SearchStepDefinitions.userShouldLandOnProductsSearchPageAndFindProducts(java.lang.String)
+
+@Search @Regression
+Scenario Outline: MultiBrowser Search validation                         # src/test/resources/features/MakerSearch.feature:41
+  Given User is on the "edge" MakerPlace Home Page                       # steps.SearchStepDefinitions.userIsOnTheMakerPlaceHomePage(java.lang.String)
+  When User enters the "stained glass" in the searchBar field            # steps.SearchStepDefinitions.userEntersTheStringInTheSearchBarField(java.lang.String)
+  And User clicks on search button                                       # steps.SearchStepDefinitions.userClicksOnSearchButton()
+  Then User should land on Products Search Page and find "stained glass" # steps.SearchStepDefinitions.userShouldLandOnProductsSearchPageAndFindProducts(java.lang.String)
+
+@Search @Regression
+Scenario Outline: MultiBrowser Search validation                         # src/test/resources/features/MakerSearch.feature:42
+  Given User is on the "firefox" MakerPlace Home Page                    # steps.SearchStepDefinitions.userIsOnTheMakerPlaceHomePage(java.lang.String)
+  When User enters the "stained glass" in the searchBar field            # steps.SearchStepDefinitions.userEntersTheStringInTheSearchBarField(java.lang.String)
+  And User clicks on search button                                       # steps.SearchStepDefinitions.userClicksOnSearchButton()
+  Then User should land on Products Search Page and find "stained glass" # steps.SearchStepDefinitions.userShouldLandOnProductsSearchPageAndFindProducts(java.lang.String)
