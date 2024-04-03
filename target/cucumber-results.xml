@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="27.276" tests="3" skipped="0" failures="0" errors="0">
-<testcase classname="MakerPlace Search functionality validation" name="MultiBrowser Search validation - Example #1.1" time="10.695">
+<testsuite name="Cucumber" time="23.722" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="MakerPlace Search functionality validation" name="MultiBrowser Search validation - Example #1.1" time="6.965">
 <system-out><![CDATA[
 Given User is on the "chrome" MakerPlace Home Page..........................passed
 When User enters the "stained glass" in the searchBar field.................passed
@@ -8,7 +8,7 @@ And User clicks on search button............................................pass
 Then User should land on Products Search Page and find "stained glass"......passed
 ]]></system-out>
 </testcase>
-<testcase classname="MakerPlace Search functionality validation" name="MultiBrowser Search validation - Example #1.2" time="8.558">
+<testcase classname="MakerPlace Search functionality validation" name="MultiBrowser Search validation - Example #1.2" time="8.691">
 <system-out><![CDATA[
 Given User is on the "edge" MakerPlace Home Page............................passed
 When User enters the "stained glass" in the searchBar field.................passed
@@ -16,7 +16,7 @@ And User clicks on search button............................................pass
 Then User should land on Products Search Page and find "stained glass"......passed
 ]]></system-out>
 </testcase>
-<testcase classname="MakerPlace Search functionality validation" name="MultiBrowser Search validation - Example #1.3" time="7.897">
+<testcase classname="MakerPlace Search functionality validation" name="MultiBrowser Search validation - Example #1.3" time="7.949">
 <system-out><![CDATA[
 Given User is on the "firefox" MakerPlace Home Page.........................passed
 When User enters the "stained glass" in the searchBar field.................passed
