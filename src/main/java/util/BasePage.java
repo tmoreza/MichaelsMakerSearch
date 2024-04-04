@@ -56,6 +56,22 @@ public class BasePage {
 		
 	}
 	
+	public void takeScreenshot(WebDriver driver, String scenarioName) {
+		TakesScreenshot scrShot = (TakesScreenshot)driver;
+		SimpleDateFormat formatter = new SimpleDateFormat("MMddyy_HHmmss");
+		Date date = new Date();
+		String label = formatter.format(date);
+		File srcFile = scrShot.getScreenshotAs(OutputType.FILE);		
+		File destFile = new File(System.getProperty("user.dir") +"\\src\\test\\resources\\Screenshots\\" + scenarioName + label + ".png");
+		try {
+			FileUtils.copyFile(srcFile, destFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
 	public int generateRandNum(int maxNumber) {
 		Random rand = new Random();
 		int generatedNum = rand.nextInt(maxNumber);

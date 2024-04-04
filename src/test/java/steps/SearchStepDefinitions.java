@@ -1,7 +1,12 @@
 package steps;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -39,10 +44,25 @@ public class SearchStepDefinitions extends BasePage{
 		boolean validationResult = productsSearchPage.validateSearchResults(searchTerm);
 		Assert.assertTrue("No matching Products were displayed!", validationResult);
 
-		
-		tearDown();
 	}
 	
-	
+	 @AfterStep
+	    public void failLog(Scenario scenario) {
+	        try {
+	            if (scenario.isFailed()) {
+	            	String scenarioName = scenario.getName();
+	            	takeScreenshot(driver, scenarioName);
+	            }
+	        } catch (Exception e) {
+				// TODO: handle exception
+			}
+	    }
+	 
+	 @After
+	    public void tearDown() {
+	       
+	            driver.quit();
+	        
+	    }
 	
 }
