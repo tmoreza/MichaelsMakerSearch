@@ -1,12 +1,11 @@
 package steps;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,7 +21,7 @@ public class SearchStepDefinitions extends BasePage{
 	@Given("User is on the {string} MakerPlace Home Page")
 	public void userIsOnTheMakerPlaceHomePage(String browser) {
 		init(browser);
-		makerHomePage = PageFactory.initElements(driver, MakerHomePage.class);
+		
 		driver.get("https://www.michaels.com/makerplace");
 		Assert.assertEquals("Failed to land on HomePage!",driver.getTitle(), "Handmade Crafts, Online Art Classes & How-To Guides | MakerPlace by Michaels");
 
@@ -30,10 +29,11 @@ public class SearchStepDefinitions extends BasePage{
 
 	@When("User enters the {string} in the searchBar field")
 	public void userEntersTheStringInTheSearchBarField(String searchTerm) {
+		makerHomePage = PageFactory.initElements(driver, MakerHomePage.class);
 		makerHomePage.insertSearchTerm(searchTerm);
 	}
 
-	@When("User clicks on search button")
+	@And("User clicks on search button")
 	public void userClicksOnSearchButton() {
 		makerHomePage.clickSearchButton();
 	}
@@ -47,7 +47,7 @@ public class SearchStepDefinitions extends BasePage{
 	}
 	
 	 @AfterStep
-	    public void failLog(Scenario scenario) {
+	 public void failLog(Scenario scenario) {
 	        try {
 	            if (scenario.isFailed()) {
 	            	String scenarioName = scenario.getName();
@@ -59,7 +59,7 @@ public class SearchStepDefinitions extends BasePage{
 	    }
 	 
 	 @After
-	    public void tearDown() {
+	 public void tearDown() {
 	       
 	            driver.quit();
 	        

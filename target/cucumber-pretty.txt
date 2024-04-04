@@ -5,12 +5,6 @@ Scenario Outline: MultiBrowser Search validation                         # src/t
   When User enters the "stained glass" in the searchBar field            # steps.SearchStepDefinitions.userEntersTheStringInTheSearchBarField(java.lang.String)
   And User clicks on search button                                       # steps.SearchStepDefinitions.userClicksOnSearchButton()
   Then User should land on Products Search Page and find "stained glass" # steps.SearchStepDefinitions.userShouldLandOnProductsSearchPageAndFindProducts(java.lang.String)
-      java.lang.AssertionError: No matching Products were displayed!
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at steps.SearchStepDefinitions.userShouldLandOnProductsSearchPageAndFindProducts(SearchStepDefinitions.java:45)
-	at ✽.User should land on Products Search Page and find "stained glass"(file:///C:/Users/Admin/eclipse-workspace1/SimpleMakerPlaceTest/src/test/resources/features/MakerSearch.feature:37)
-
 
 @Search @Regression
 Scenario Outline: MultiBrowser Search validation                         # src/test/resources/features/MakerSearch.feature:41
@@ -18,12 +12,6 @@ Scenario Outline: MultiBrowser Search validation                         # src/t
   When User enters the "stained glass" in the searchBar field            # steps.SearchStepDefinitions.userEntersTheStringInTheSearchBarField(java.lang.String)
   And User clicks on search button                                       # steps.SearchStepDefinitions.userClicksOnSearchButton()
   Then User should land on Products Search Page and find "stained glass" # steps.SearchStepDefinitions.userShouldLandOnProductsSearchPageAndFindProducts(java.lang.String)
-      java.lang.AssertionError: No matching Products were displayed!
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at steps.SearchStepDefinitions.userShouldLandOnProductsSearchPageAndFindProducts(SearchStepDefinitions.java:45)
-	at ✽.User should land on Products Search Page and find "stained glass"(file:///C:/Users/Admin/eclipse-workspace1/SimpleMakerPlaceTest/src/test/resources/features/MakerSearch.feature:37)
-
 
 @Search @Regression
 Scenario Outline: MultiBrowser Search validation                         # src/test/resources/features/MakerSearch.feature:42
@@ -31,9 +19,3 @@ Scenario Outline: MultiBrowser Search validation                         # src/t
   When User enters the "stained glass" in the searchBar field            # steps.SearchStepDefinitions.userEntersTheStringInTheSearchBarField(java.lang.String)
   And User clicks on search button                                       # steps.SearchStepDefinitions.userClicksOnSearchButton()
   Then User should land on Products Search Page and find "stained glass" # steps.SearchStepDefinitions.userShouldLandOnProductsSearchPageAndFindProducts(java.lang.String)
-      java.lang.AssertionError: No matching Products were displayed!
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at steps.SearchStepDefinitions.userShouldLandOnProductsSearchPageAndFindProducts(SearchStepDefinitions.java:45)
-	at ✽.User should land on Products Search Page and find "stained glass"(file:///C:/Users/Admin/eclipse-workspace1/SimpleMakerPlaceTest/src/test/resources/features/MakerSearch.feature:37)
-
